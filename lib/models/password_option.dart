@@ -1,5 +1,3 @@
-/// Representa uma opção de tipo de caractere retornada por
-/// GET /api/character-sets (ex: {id: "lowercase", label: "Letras minúsculas"})
 class PasswordOption {
   final String id;
   final String label;
@@ -20,7 +18,6 @@ class PasswordOption {
   }
 }
 
-/// Faixa de tamanho permitida (min/max/default), também vinda da API.
 class LengthRange {
   final int min;
   final int max;
@@ -41,7 +38,6 @@ class LengthRange {
   }
 }
 
-/// Junta as duas coisas: o que GET /api/character-sets retorna.
 class CharacterSetsResponse {
   final List<PasswordOption> options;
   final LengthRange length;

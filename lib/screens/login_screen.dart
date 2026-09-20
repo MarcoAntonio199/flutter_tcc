@@ -4,9 +4,6 @@ import '../widgets/social_login_button.dart';
 import 'home_screen.dart';
 import 'signup_screen.dart';
 
-/// Tela de login "de exemplo": não valida credenciais de verdade.
-/// O botão "Entrar" simplesmente leva para a home do app, simulando o
-/// fluxo — igual muitos apps mostram em telas de demonstração.
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
 

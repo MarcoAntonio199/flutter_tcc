@@ -2,8 +2,6 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 import '../../models/password_option.dart';
 
-/// Exceção customizada para erros de validação vindos da API
-/// (ex: "Selecione ao menos um tipo de caractere").
 class PasswordApiException implements Exception {
   final String message;
   PasswordApiException(this.message);
@@ -13,17 +11,11 @@ class PasswordApiException implements Exception {
 }
 
 class PasswordApiService {
-  /// Endereço base da API.
-  ///
-  /// - Emulador Android -> 'http://10.0.2.2:3000'
-  /// - Celular físico (mesma rede Wi-Fi) -> 'http://SEU_IP_LOCAL:3000'
-  /// - Web/Desktop/iOS Simulator -> 'http://localhost:3000'
-  /// - Produção -> 'https://sua-api-hospedada.com'
+
   final String baseUrl;
 
   PasswordApiService({required this.baseUrl});
 
-  /// Busca os tipos de caracteres disponíveis para montar a tela.
   Future<CharacterSetsResponse> fetchCharacterSets() async {
     final uri = Uri.parse('$baseUrl/api/character-sets');
 
@@ -41,10 +33,6 @@ class PasswordApiService {
     return CharacterSetsResponse.fromJson(data);
   }
 
-  /// Gera uma senha com base nas opções marcadas pelo usuário.
-  ///
-  /// [selectedOptionIds]: ids marcados, ex: {"lowercase", "numbers"}.
-  /// A API espera um booleano por tipo, então convertemos aqui.
   Future<String> generatePassword({
     required int length,
     required Set<String> selectedOptionIds,

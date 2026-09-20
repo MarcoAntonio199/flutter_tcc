@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../theme/app_theme.dart';
 
-/// Botão de "Entrar com Google/Apple" apenas ilustrativo — como pedido,
-/// sem autenticação real. Ao tocar, mostra um aviso rápido explicando isso.
 class SocialLoginButton extends StatelessWidget {
   final IconData icon;
   final String label;

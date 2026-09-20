@@ -4,9 +4,6 @@ import '../models/password_option.dart';
 import '../services/password_api_service.dart';
 import '../theme/app_theme.dart';
 
-/// Versão discreta do gerador: mesma API do site, mas sem cores fortes,
-/// cards coloridos ou ícones chamativos — se encaixando no visual do resto
-/// do app (preto e branco, bordas finas, tipografia limpa).
 class GeneratorScreen extends StatefulWidget {
   const GeneratorScreen({super.key});
 

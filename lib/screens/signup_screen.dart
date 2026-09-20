@@ -3,8 +3,6 @@ import 'package:intl/intl.dart';
 import '../theme/app_theme.dart';
 import 'home_screen.dart';
 
-/// Tela de cadastro "de exemplo" — não cria conta de verdade em nenhum
-/// backend. O botão "registrar-se" só leva para a home, simulando o fluxo.
 class SignupScreen extends StatefulWidget {
   const SignupScreen({super.key});
 

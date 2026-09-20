@@ -1,8 +1,5 @@
 import 'package:flutter/material.dart';
- 
-/// Tema central do KryptoVault: estritamente preto e branco (com tons de
-/// cinza para hierarquia), bordas finas, tipografia limpa em caixa alta
-/// para labels — inspirado nas telas de referência (login/cadastro).
+
 class AppTheme {
   AppTheme._();
  
@@ -117,9 +114,7 @@ class AppTheme {
       ),
     );
   }
- 
-  /// Estilo de label em caixa alta com espaçamento, como nas telas de
-  /// referência ("NOME", "EMAIL", "SENHA"...).
+  
   static const TextStyle fieldLabel = TextStyle(
     color: textSecondary,
     fontSize: 12,
